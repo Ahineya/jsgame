@@ -4,10 +4,10 @@
 	<section class="level-wrapper clearfix">
 	    <article class="level-results clearfix">
 	    	<ul>
-	            <li ng-repeat="succ in selectedLevel.data.successed" ng-class="getClass($index, 'successed')">{{succ}}</li>
+	            <li class="level-test" ng-repeat="succ in selectedLevel.data.successed" ng-class="getClass($index, 'successed')">{{succ}}</li>
 	        </ul>
 	        <ul>
-	            <li ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
+	            <li class="level-test" ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
 	        </ul>
 	    </article>
 		<article class="level-controls clearfix">
@@ -17,7 +17,10 @@
 			<button ng-click="testRegexp()">Check</button>
 		</article>
 	    <article class="level-alerts clearfix">
-	    	<h1 class="level-alert success" ng-show="checkVictory()" ng-click="nextLevel(selectedLevel)">You win. Next level</h1>
+	    	<div class="level-alert success" ng-show="checkVictory()">
+	    		<p>You win.</p>
+	    		<button class="next-level" ng-click="nextLevel(selectedLevel)">Next level</button>
+	    	</div>
 	    </article>
     </section>
     <section class="level-wrapper clearfix" ng-bind-html="selectedLevel.description"></section>
