@@ -23,29 +23,7 @@ angular.module('jsgameApp')
         }
     };
 
-        $scope.nextLevel = function(selectedLevel) {
 
-            console.log('here');
-
-            var lid = selectedLevel.id;
-            /*$scope.levelsData.filter(function(item) {
-                return item.id === lid;
-            });*/
-
-            var l = $scope.levelsData.length;
-            var nextLevelId;
-            for (var i = 0; i < l; i++) {
-                if ($scope.levelsData[i].id === lid) {
-                    nextLevelId = i+1;
-                    break;
-                }
-            }
-
-            console.log(nextLevelId);
-
-            $scope.selectedLevel = $scope.levelsData[nextLevelId];
-
-        };
 
     $http({method: 'GET', url: '/data/levels.json'})
         .success(function(data){

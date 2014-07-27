@@ -14,8 +14,37 @@ angular.module('jsgameApp')
         $scope.failedResults = [];
 
         $scope.getClass = function($index, checkingType) {
+            if (typeof $scope[checkingType+'Results'][$index] === "undefined") {
+                return "";
+            }
             return $scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
         };
+
+        $scope.nextLevel = function(selectedLevel) {
+
+            $scope.successedResults = [];
+            $scope.failedResults = [];
+
+            var lid = selectedLevel.id;
+
+            var l = $scope.levelsData.length;
+            var nextLevelId;
+            for (var i = 0; i < l; i++) {
+                if ($scope.levelsData[i].id === lid) {
+                    nextLevelId = i+1;
+                    break;
+                }
+            }
+
+            if (typeof $scope.levelsData[nextLevelId] !== "undefined") {
+                $scope.selectedLevel = $scope.levelsData[nextLevelId];
+            } else {
+                $scope.playing = false; //Add flag to show end of the universe
+            }
+
+        };
+
+        $scope.regexp = "";
 
         $scope.testRegexp = function() {
 
@@ -32,6 +61,13 @@ angular.module('jsgameApp')
         };
 
         $scope.checkVictory = function() {
+
+            console.log($scope.regexp);
+
+            if ( (typeof $scope.regexp === 'undefined') || ($scope.regexp.length < 1)) {
+                return false;
+            }
+
             var res = ($scope.successedResults.filter(
                 function(item) {return item;}
             ).length !== 0) &&
