@@ -1,11 +1,11 @@
 <div>
     <ul>
     	<li ng-repeat="level in levelsData">
-            <a ng-click="test(level)">{{level.name}}</a>
+            <a ng-click="test(level)" class="level-link">{{level.name}}</a>
         </li>
     </ul>
 
-    <div ng-show="playing" ng-include="'/views/levels/' + selectedLevel.type + '.html'">
+    <div class="clearfix" ng-show="playing" ng-include="'/views/levels/' + selectedLevel.type + '.html'">
 
     </div>
 
