@@ -17,7 +17,13 @@ angular.module('jsgameApp')
             if (typeof $scope[checkingType+'Results'][$index] === 'undefined') {
                 return '';
             }
-            return $scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
+
+            if (checkingType === "successed") {
+                return $scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
+            } else {
+                return !$scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
+            }
+
         };
 
         $scope.nextLevel = function(selectedLevel) {
