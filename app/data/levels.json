@@ -15,7 +15,7 @@
         "type": "golf",
         "data": {
             "successed": ["aa", "bb", "cc"],
-            "failed": ["11", "12", "13"]
+            "failed": ["a", "b", "c"]
         }
     },{
         "id": "testlevel3",
@@ -23,8 +23,8 @@
         "description": "<p>Lalala lorem ipsum 3</p>",
         "type": "golf",
         "data": {
-            "successed": ["aaa", "bbb", "ddd"],
-            "failed": ["111", "222", "333"]
+            "successed": ["aaa", "bbb", "ccc"],
+            "failed": ["aba", "cac", "bba"]
         }
     }
 ]

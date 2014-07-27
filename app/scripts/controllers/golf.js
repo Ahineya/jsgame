@@ -57,10 +57,6 @@ angular.module('jsgameApp')
                 return regex.test(item);
             });
 
-            console.log($scope.selectedLevel);
-            console.log($scope.successedResults);
-
-
             $scope.failedResults = $scope.selectedLevel.data.failed.map(function(item) {
                 return regex.test(item);
             });
