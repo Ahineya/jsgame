@@ -43,6 +43,8 @@ a {color: #6E7163; text-decoration: none;}
       .level-results ul {float: left;width: 46%; margin: 0 2%;}
         .level-results ul li {padding: 10px; background-color: #fff;}
         .level-results ul li:not(:first-child) {margin-top: 10px;}
+        .list-subtitle {background-color: transparent !important;font-weight: 700;}
+
     .level-controls {margin: 10px 2% 0;}
       .regexp-field-wrapper {float: left; width: 80%;margin-right: 4%; position: relative;}
         .regexp-field-wrapper:before {content: "\/"; display: block;position: absolute;top: 0; left: 3px;z-index: 11;font-size: 30px;line-height: 43px; }
