@@ -4,10 +4,10 @@
 	<section class="level-wrapper clearfix">
 	    <article class="level-results clearfix">
 	    	<ul>
-	            <li class="level-test" ng-repeat="succ in selectedLevel.data.successed" ng-class="getClass($index, 'successed')">{{succ}}</li>
+	            <li ng-repeat="succ in selectedLevel.data.successed" ng-class="getClass($index, 'successed')">{{succ}}</li>
 	        </ul>
 	        <ul>
-	            <li class="level-test" ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
+	            <li ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
 	        </ul>
 	    </article>
 		<article class="level-controls clearfix">

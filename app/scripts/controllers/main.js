@@ -14,12 +14,12 @@ angular.module('jsgameApp')
 
         $scope.playing = false;
     $scope.selectedLevel = {
-    	"name": "Level data",
-        "description": "<p>Test description</p>",
-        "type": "golf",
-        "data": {
-            "successed": ["a", "b", "c"],
-            "failed": ["1", "2", "3"]
+    	'name': 'Level data',
+        'description': '<p>Test description</p>',
+        'type': 'golf',
+        'data': {
+            'successed': ['a1', 'b', 'c'],
+            'failed': ['1', '2', '3']
         }
     };
 

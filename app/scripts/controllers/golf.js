@@ -14,8 +14,8 @@ angular.module('jsgameApp')
         $scope.failedResults = [];
 
         $scope.getClass = function($index, checkingType) {
-            if (typeof $scope[checkingType+'Results'][$index] === "undefined") {
-                return "";
+            if (typeof $scope[checkingType+'Results'][$index] === 'undefined') {
+                return '';
             }
             return $scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
         };
@@ -24,6 +24,8 @@ angular.module('jsgameApp')
 
             $scope.successedResults = [];
             $scope.failedResults = [];
+            $scope.regex = '';
+            $scope.victory = false;
 
             var lid = selectedLevel.id;
 
@@ -36,15 +38,16 @@ angular.module('jsgameApp')
                 }
             }
 
-            if (typeof $scope.levelsData[nextLevelId] !== "undefined") {
+            if (typeof $scope.levelsData[nextLevelId] !== 'undefined') {
                 $scope.selectedLevel = $scope.levelsData[nextLevelId];
             } else {
                 $scope.playing = false; //Add flag to show end of the universe
             }
 
+
         };
 
-        $scope.regexp = "";
+        $scope.regexp = '';
 
         $scope.testRegexp = function() {
 
@@ -54,13 +57,19 @@ angular.module('jsgameApp')
                 return regex.test(item);
             });
 
+            console.log($scope.selectedLevel);
+            console.log($scope.successedResults);
+
+
             $scope.failedResults = $scope.selectedLevel.data.failed.map(function(item) {
                 return regex.test(item);
             });
 
+            $scope.victory = ($scope.successedResults.indexOf(false) < 0) && ($scope.failedResults.indexOf(true) < 0);
+
         };
 
-        $scope.checkVictory = function() {
+        /*$scope.checkVictory = function() {
 
             console.log($scope.regexp);
 
@@ -68,15 +77,12 @@ angular.module('jsgameApp')
                 return false;
             }
 
-            var res = ($scope.successedResults.filter(
-                function(item) {return item;}
-            ).length !== 0) &&
-                ($scope.failedResults.filter(
-                    function(item) {return !item;}
-                ).length === 0);
+            var res = ($scope.successedResults.indexOf(false) < 0) && ($scope.failedResults.indexOf(true) < 0);
+
+            console.log(res);
 
             return $scope.successedResults.length === 0 ? false : res;
 
-        };
+        };*/
 
   });
