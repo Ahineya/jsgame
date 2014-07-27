@@ -1,9 +1,12 @@
 <div>
-    <input type="text" ng-model="fil"/>
     <ul>
-        <li ng-repeat="zaets in awesomeThings | filter: fil">{{zaets}}</li>
+    	<li ng-repeat="level in levelsData">
+            <a ng-click="test(level)">{{level.name}}</a>
+        </li>
     </ul>
-    <ul>
-    	<li ng-repeat="level in levelsData">{{level}}</li>
-    </ul>
+
+    <div ng-show="playing" ng-include="'/views/levels/' + selectedLevel.type + '.html'">
+
+    </div>
+
 </div>

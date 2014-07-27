@@ -10,23 +10,21 @@
 angular.module('jsgameApp')
   .controller('MainCtrl', function ($scope, $http) {
 
-
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-        'Zalupa'
-    ];
-
     $scope.levelsData = [];
+
+        $scope.playing = false;
+    $scope.selectedLevel = {};
 
     $http({method: 'GET', url: '/data/levels.json'}).success(function(data){
     	$scope.levelsData = data;
-    	console.log(data);
     }).
     error(function(data) {
-    	console.log(data);
     });
+
+        $scope.test = function(level) {
+            $scope.playing = true;
+            $scope.selectedLevel = level;
+        }
 
         //$scope.fil="";
 

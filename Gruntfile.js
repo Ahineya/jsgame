@@ -48,6 +48,12 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
       },
+      levels: {
+          files: ['<%= yeoman.app %>/data/*.json'],
+          options: {
+              livereload: '<%= connect.options.livereload %>'
+          }
+      },
       gruntfile: {
         files: ['Gruntfile.js']
       },

@@ -1,1 +1,27 @@
-["First level", "Second level", "Third level", "Fourth level"];
+[
+    {
+        "name": "Level1",
+        "description": "<p>Lalala lorem ipsum 1</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["a", "b", "c"],
+            "failed": ["1", "2", "3"]
+        }
+    },{
+        "name": "Level2",
+        "description": "<p>Lalala lorem ipsum 2</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["a", "b", "c"],
+            "failed": ["1", "2", "3"]
+        }
+    },{
+        "name": "Level3",
+        "description": "<p>Lalala lorem ipsum 3</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["a", "b", "d"],
+            "failed": ["1", "2", "3"]
+        }
+    }
+]
