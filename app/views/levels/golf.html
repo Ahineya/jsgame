@@ -3,16 +3,19 @@
 
     <div>
         <ul>
-            <li ng-repeat="succ in selectedLevel.data.successed">{{succ}}</li>
+            <li ng-repeat="succ in selectedLevel.data.successed" ng-class="getClass($index, 'successed')">{{succ}}</li>
         </ul>
+
     </div>
     <div>
         <ul>
-            <li ng-repeat="fail in selectedLevel.data.failed">{{fail}}</li>
+            <li ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
         </ul>
     </div>
 
     <input type="text" ng-model="regexp"/>
     <button ng-click="testRegexp()">Check</button>
+
+    <h1 ng-show="checkVictory()">HOOORAY</h1>
 
 </section>
