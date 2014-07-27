@@ -32,7 +32,15 @@ angular.module('jsgameApp')
         };
 
         $scope.checkVictory = function() {
-            return ($scope.successedResults.reduce(function(prev, next) {return prev ? next : false;}, true)) ;
+            var res = ($scope.successedResults.filter(
+                function(item) {return item;}
+            ).length !== 0) &&
+                ($scope.failedResults.filter(
+                    function(item) {return !item;}
+                ).length === 0);
+
+            return $scope.successedResults.length === 0 ? false : res;
+
         };
 
   });

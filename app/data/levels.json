@@ -1,5 +1,6 @@
 [
     {
+        "id": "testlevel1",
         "name": "Level1",
         "description": "<p>Lalala lorem ipsum 1</p>",
         "type": "golf",
@@ -8,6 +9,7 @@
             "failed": ["1", "2", "3"]
         }
     },{
+        "id": "testlevel2",
         "name": "Level2",
         "description": "<p>Lalala lorem ipsum 2</p>",
         "type": "golf",
@@ -16,6 +18,7 @@
             "failed": ["11", "12", "13"]
         }
     },{
+        "id": "testlevel3",
         "name": "Level3",
         "description": "<p>Lalala lorem ipsum 3</p>",
         "type": "golf",
