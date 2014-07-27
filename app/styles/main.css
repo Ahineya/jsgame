@@ -26,8 +26,13 @@ a {color: #6E7163; text-decoration: none;}
           .header-navigation li:not(:last-child) {margin-right: 10px;}
           .header-navigation li a {line-height: 45px; padding: 3px 6px; background-color: #fff;}
             .header-navigation li a:hover {background-color: #CCC9C9;} 
+  .level-window {position: absolute; top: 0; bottom: 0; margin: 60px 1% 0; width: 98%; background-color: #808080; z-index: 10; overflow: auto;}
+    .level-window-closer {display: block; position: absolute;top: 0; right: 0;width: 16px;height: 16px;line-height: 16px; text-align: center;cursor:pointer;}
+    .level-window ul {list-style: none;}
 
-
+    .level-results {}
+      .level-results ul {float: left;}
+        .level-results ul li {width: 250px;}
 
 
 /* ===== Temp styles ===== */
