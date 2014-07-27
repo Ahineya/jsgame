@@ -9,9 +9,15 @@
  */
 angular.module('jsgameApp')
   .controller('MainCtrl', function ($scope) {
+
+
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+        'Zalupa'
     ];
+
+        //$scope.fil="";
+
   });
