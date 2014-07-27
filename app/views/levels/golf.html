@@ -1,3 +1,18 @@
-<p>Golf view</p>
-Test
-<p>{{selectedLevel.name}}</p>
+<section ng-controller="GolfCtrl">
+    <div>{{name}}</div>
+
+    <div>
+        <ul>
+            <li ng-repeat="succ in selectedLevel.data.successed">{{succ}}</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li ng-repeat="fail in selectedLevel.data.failed">{{fail}}</li>
+        </ul>
+    </div>
+
+    <input type="text" ng-model="regexp"/>
+    <button ng-click="testRegexp()">Check</button>
+
+</section>

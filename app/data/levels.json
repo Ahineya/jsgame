@@ -12,16 +12,16 @@
         "description": "<p>Lalala lorem ipsum 2</p>",
         "type": "golf",
         "data": {
-            "successed": ["a", "b", "c"],
-            "failed": ["1", "2", "3"]
+            "successed": ["aa", "bb", "cc"],
+            "failed": ["11", "12", "13"]
         }
     },{
         "name": "Level3",
         "description": "<p>Lalala lorem ipsum 3</p>",
         "type": "golf",
         "data": {
-            "successed": ["a", "b", "d"],
-            "failed": ["1", "2", "3"]
+            "successed": ["aaa", "bbb", "ddd"],
+            "failed": ["111", "222", "333"]
         }
     }
 ]
