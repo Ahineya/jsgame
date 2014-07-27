@@ -13,7 +13,15 @@ angular.module('jsgameApp')
     $scope.levelsData = [];
 
         $scope.playing = false;
-    $scope.selectedLevel = {};
+    $scope.selectedLevel = {
+    	"name": "Level data",
+        "description": "<p>Test description</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["a", "b", "c"],
+            "failed": ["1", "2", "3"]
+        }
+    };
 
     $http({method: 'GET', url: '/data/levels.json'}).success(function(data){
     	$scope.levelsData = data;
