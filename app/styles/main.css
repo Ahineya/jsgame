@@ -18,6 +18,7 @@ a {color: #6E7163; text-decoration: none;}
         #games-list ul li:not(:last-child) {margin-right: 15px;}
           .game-link {text-decoration: none; color: #333;}
             .game-link:hover {color: #fff;}
+            .game-link.selected {color: #92F180;}
   header.page {}
     header.page h1 {float: left;font-size: 26px; padding: 10px; color:#BFC2C4;}
     header.page nav {float: right;}
@@ -26,6 +27,18 @@ a {color: #6E7163; text-decoration: none;}
           .header-navigation li:not(:last-child) {margin-right: 10px;}
           .header-navigation li a {line-height: 51px; padding: 3px 6px; background-color: #fff;}
             .header-navigation li a:hover {background-color: #CCC9C9;} 
+
+  .levels-list {list-style: none;margin-left: 15px;}
+    .level-list-item {float: left;position: relative;}
+      .level-list-item:not(:last-child) {margin-right: 15px;}
+        .level-link {display: block; position: absolute; top: 0; left: 0; width: 50px; height: 50px;line-height: 50px; text-align: center;}
+      
+    
+    .ll-canvas { transition: all 0.5s linear; }
+      .level-list-item:hover > .ll-canvas { transform: rotate(180deg); }
+
+
+
   .level-window {position: absolute; top: 0; bottom: 0; margin: 70px 1% 0; width: 98%; background-color: #cacaca; z-index: 10; overflow: auto; }
     .level-wrapper {float: left;width:50%;position: relative;}
     .level-window-closer {display: block; position: absolute;top: 0; right: 0;width: 32px;height: 32px;line-height: 32px; text-align: center;cursor:pointer;background-color: #fff;}
