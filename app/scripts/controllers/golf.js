@@ -8,17 +8,19 @@
  * Controller of the jsgameApp
  */
 angular.module('jsgameApp')
-  .controller('GolfCtrl', function ($scope) {
+  .controller('GolfCtrl', function ($scope, levels) {
 
         $scope.successedResults = [];
         $scope.failedResults = [];
+
+        $scope.playing = levels.playing;
 
         $scope.getClass = function($index, checkingType) {
             if (typeof $scope[checkingType+'Results'][$index] === 'undefined') {
                 return '';
             }
 
-            if (checkingType === "successed") {
+            if (checkingType === 'successed') {
                 return $scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
             } else {
                 return !$scope[checkingType+'Results'][$index] ? 'success': 'fail' ;
@@ -47,6 +49,7 @@ angular.module('jsgameApp')
             if (typeof $scope.levelsData[nextLevelId] !== 'undefined') {
                 $scope.selectedLevel = $scope.levelsData[nextLevelId];
             } else {
+                levels.playing = false;
                 $scope.playing = false; //Add flag to show end of the universe
             }
 

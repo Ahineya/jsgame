@@ -1,7 +1,7 @@
 <div>
     <ul class="levels-list">
     	<li ng-repeat="level in levelsData">
-            <a ng-click="test(level)" class="level-link">{{level.name}}</a>
+            <a ng-click="loadLevel(level)" class="level-link">{{level.name}}</a>
         </li>
     </ul>
 	<section class="level-window clearfix"  ng-show="playing">

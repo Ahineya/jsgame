@@ -8,33 +8,35 @@
  * Controller of the jsgameApp
  */
 angular.module('jsgameApp')
-  .controller('MainCtrl', function ($scope, $http) {
+    .controller('MainCtrl', function ($scope, $http, levels) {
 
-    $scope.levelsData = [];
+        $scope.levelsData = [];
 
-        $scope.playing = false;
-    $scope.selectedLevel = {
-    	'name': 'Level data',
-        'description': '<p>Test description</p>',
-        'type': 'golf',
-        'data': {
-            'successed': ['a1', 'b', 'c'],
-            'failed': ['1', '2', '3']
-        }
-    };
+        $scope.playing = levels.playing;
 
+        $scope.selectedLevel = {
+            'name': 'Level data',
+            'description': '<p>Test description</p>',
+            'type': 'golf',
+            'data': {
+                'successed': ['a1', 'b', 'c'],
+                'failed': ['1', '2', '3']
+            }
+        };
 
-
-    $http({method: 'GET', url: '/data/levels.json'})
-        .success(function(data){
-    	    $scope.levelsData = data;
+        levels.get().then(function(d) {
+            levels.data = d;
+            $scope.levelsData = levels.data;
         });
 
-        $scope.test = function(level) {
+       /* $http({method: 'GET', url: '/data/levels.json'})
+            .success(function(data){
+                $scope.levelsData = data;
+            });
+*/
+        $scope.loadLevel = function(level) {
             $scope.playing = true;
             $scope.selectedLevel = level;
         };
-
-        //$scope.fil="";
 
   });
