@@ -28,6 +28,7 @@ angular.module('jsgameApp')
 
         };
 
+        /*rewrite to service*/
         $scope.nextLevel = function(selectedLevel) {
 
             $scope.successedResults = [];
