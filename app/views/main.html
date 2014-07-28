@@ -1,9 +1,6 @@
 <div>
     <ul class="levels-list clearfix">
-    	<li ng-repeat="level in levelsData" class='level-list-item clearfix'>
-    		<canvas class='ll-canvas' width='50' height='50'></canvas>
-            <a ng-click="loadLevel(level)" class="level-link clearfix">{{$index+1}}</a>
-        </li>
+    	<li ng-repeat="level in levelsData" level-selector class='level-list-item clearfix'></li>
     </ul>
 	<section class="level-window clearfix"  ng-show="playing">
 		<span class="level-window-closer" ng-click="playing = false">x</span>
