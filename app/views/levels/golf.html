@@ -18,7 +18,7 @@
 			</div>
 			<button ng-click="testRegexp()">Check</button>
 		</article>
-	    <article class="level-alerts clearfix">
+	    <article class="level-alerts clearfix" ng-show="victory">
 	    	<div class="level-alert success" ng-show="victory">
 	    		<p>You win.</p>
 	    		<button class="next-level" ng-click="nextLevel(selectedLevel)">Next level</button>
