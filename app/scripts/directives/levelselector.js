@@ -16,7 +16,8 @@ angular.module('jsgameApp')
             function Polygon(options) {
                 this.options = {
                     lineWidth: 2,
-                    color: 'green',
+                    colorStroke: 'green',
+                    colorFill: '#000',
                     corners: 6
                 };
 
@@ -57,7 +58,8 @@ angular.module('jsgameApp')
                     this.ctx.closePath();
 
                     this.ctx.lineWidth = this.options.lineWidth;
-                    this.ctx.strokeStyle = this.options.color;
+                    this.ctx.strokeStyle = this.options.colorStroke;
+                    this.ctx.fillStyle = this.options.colorFill;
 
                     this.ctx.fill();
                     this.ctx.stroke();
@@ -68,11 +70,12 @@ angular.module('jsgameApp')
 
             var options = {
                 element: element,
-                color: attrs.strokeStyle,
+                colorStroke: attrs.strokeStyle,
+                colorFill: attrs.fillStyle,
                 corners: scope.$eval(attrs.corners),
                 lineWidth: attrs.lineWidth
             };
-
+            console.log(options);
             var p = new Polygon(options);
             p.build();
 
