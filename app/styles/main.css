@@ -54,6 +54,7 @@ a {color: #6E7163; text-decoration: none;}
       .level-test.success {background-color: #92c092;}
       .level-test.fail {background-color: #c09292;}
       .level-results ul {float: left;width: 46%; margin: 0 2%;}
+        .level-results.crosser ul {width: 96% !important;}
         .level-results ul li {padding: 10px; background-color: #fff;}
         .level-results ul li:not(:first-child) {margin-top: 10px;}
         .list-subtitle {background-color: transparent !important;font-weight: 700;}
@@ -62,7 +63,8 @@ a {color: #6E7163; text-decoration: none;}
       .regexp-field-wrapper {float: left; width: 80%;margin-right: 4%; position: relative;}
         .regexp-field-wrapper:before {content: "\/"; display: block;position: absolute;top: 0; left: 3px;z-index: 11;font-size: 30px;line-height: 43px; }
         .regexp-field-wrapper:after {content: "\/"; display: block;position: absolute;top: 0; right: 3px;z-index: 11;font-size: 30px;line-height: 43px; }
-      .level-controls input {position: relative; width: 96%;height: 40px; outline: none;border: none;padding: 0 2%;font-size: 20px;}
+      .level-controls.golf input {position: relative; width: 96%;height: 40px; outline: none;border: none;padding: 0 2%;font-size: 20px;}
+      .level-controls.crosser input {position: relative; width: 76%;margin-right: 4%;height: 40px; outline: none;border: none;padding: 0 2%;font-size: 20px;}
       .level-controls button {position: relative; width: 15%; height: 40px;outline: none; line-height: 40px; font-size: 16px; color: #FFF; text-align: center; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); background: #27AE60; border: 0; border-bottom: 2px solid #219D55; cursor: pointer; -webkit-box-shadow: inset 0 -2px #219D55; box-shadow: inset 0 -2px #219D55;}
         .level-controls button:active {top: 1px; box-shadow: none;}
     
