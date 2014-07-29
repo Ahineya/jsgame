@@ -1,6 +1,8 @@
 <div>
     <ul class="levels-list clearfix">
-    	<li ng-repeat="level in levelsData" level-selector class='level-list-item clearfix'></li>
+    	<li ng-repeat="level in levelsData" class='level-list-item clearfix'>
+            <level-selector stroke-style="green" corners="7" line-width="2" />
+    	</li>
     </ul>
 	<section class="level-window clearfix"  ng-show="playing">
 		<span class="level-window-closer" ng-click="playing = false">x</span>

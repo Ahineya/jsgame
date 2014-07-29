@@ -36,5 +36,9 @@
   },
   "scripts": {
     "test": "grunt test"
-  }
+  },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Ahineya/jsgame.git"
+    }
 }

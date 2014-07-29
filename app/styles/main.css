@@ -35,7 +35,7 @@ a {color: #6E7163; text-decoration: none;}
       
     
     .ll-canvas { transition: all 0.5s linear; }
-      .level-list-item:hover > .ll-canvas { transform: rotate(180deg); }
+      .level-list-item:hover .ll-canvas { transform: rotate(180deg); }
 
 
 
