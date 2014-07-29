@@ -1,0 +1,15 @@
+<div ng-controller="CrosserCtrl">
+	<div>
+		<div ng-repeat="regex in selectedLevel.data.regexps" ng-class="getClass($index)">{{regex}}</div>
+	</div>
+
+	<article class="level-alerts clearfix" ng-show="victory">
+		<div class="level-alert success" ng-show="victory">
+			<p>You win.</p>
+			<button class="next-level" ng-click="nextLevel(selectedLevel)">Next level</button>
+		</div>
+	</article>
+
+	<input ng-model='input'>
+	<button ng-click="testInput()">Check</button>
+</div>

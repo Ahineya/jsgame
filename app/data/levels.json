@@ -36,5 +36,14 @@
             "successed": ["famous", "fabulous", "precious"],
             "failed": ["fiddle", "dribble", "tussle"]
         }
+    },
+    {
+        "id": "testlevel5",
+        "name": "Level5",
+        "description": "<p>Lalala lorem ipsum 3</p>",
+        "type": "crosser",
+        "data": {
+            "regexps": ["[a-d]","[c-z]"]
+        }
     }
 ]

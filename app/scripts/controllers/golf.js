@@ -33,7 +33,7 @@ angular.module('jsgameApp')
 
             $scope.successedResults = [];
             $scope.failedResults = [];
-            $scope.regex = '';
+            $scope.regexp = '';
             $scope.victory = false;
 
             var lid = selectedLevel.id;
@@ -64,11 +64,11 @@ angular.module('jsgameApp')
             var regex = new RegExp($scope.regexp);
 
             $scope.successedResults = $scope.selectedLevel.data.successed.map(function(item) {
-                return regex.test(item);
+                return $scope.regexp !== '' ? regex.test(item) : false;
             });
 
             $scope.failedResults = $scope.selectedLevel.data.failed.map(function(item) {
-                return regex.test(item);
+                return $scope.regexp !== '' ? regex.test(item) : true;
             });
 
             $scope.victory = ($scope.successedResults.indexOf(false) < 0) && ($scope.failedResults.indexOf(true) < 0);
