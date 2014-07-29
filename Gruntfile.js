@@ -357,7 +357,19 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    //Deploy to github-pages
+    githubPages: {
+    target: {
+      options: {
+        // The default commit message for the gh-pages branch
+        commitMessage: 'deploy'
+      },
+      // The folder where your gh-pages repo is
+      src: 'app'
     }
+  }
   });
 
 
@@ -411,4 +423,7 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('deploy', ['githubPages:target']);
+
 };
