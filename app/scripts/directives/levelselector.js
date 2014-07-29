@@ -30,8 +30,7 @@ angular.module('jsgameApp')
 
                 this.build = function() {
                     this.ctx.beginPath();
-                    var oW = this.obj.width,
-                        oH = this.obj.height,
+                    var 
                         radius = this.obj.width/2 - 5,
                         y0 = this.obj.width/2,
                         x0 = this.obj.width/2;
@@ -43,9 +42,9 @@ angular.module('jsgameApp')
                         path = [];
 
                     for (var i = 0; i < this.options.corners; i++){
-                        var temp_x = (x0+Math.round(radius*Math.cos(a*Math.PI/180)));
-                        var temp_y = (y0-Math.round(radius*Math.sin(a*Math.PI/180)));
-                        path.push([temp_x,temp_y]);
+                        var tempX = (x0+Math.round(radius*Math.cos(a*Math.PI/180)));
+                        var tempY = (y0-Math.round(radius*Math.sin(a*Math.PI/180)));
+                        path.push([tempX,tempY]);
                         if (i === 0) {
                             this.ctx.moveTo(path[i][0], path[i][1]);
                         } else {
