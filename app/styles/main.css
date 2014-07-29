@@ -41,7 +41,7 @@ a {color: #6E7163; text-decoration: none;}
 
   .level-window {position: absolute; top: 0; bottom: 0; margin: 70px 1% 0; width: 98%; background-color: #cacaca; z-index: 10; overflow: auto; }
     .level-wrapper {float: left;width:50%;position: relative;}
-    .level-window-closer {display: block; position: absolute;top: 0; right: 0;width: 32px;height: 32px;line-height: 32px; text-align: center;cursor:pointer;background-color: #fff;}
+    .level-window-closer {display: block; position: absolute;top: 0; right: 0;width: 32px;height: 32px;line-height: 32px; text-align: center;cursor:pointer;background-color: #fff;font-size: 26px;}
       .level-window-closer:hover {background-color: #9c9c9c;}
     
     h1.level-title {padding: 10px;}
