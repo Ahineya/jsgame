@@ -12,9 +12,9 @@ describe('Directive: levelSelector', function () {
     scope = $rootScope.$new();
   }));
 
-  it('should have canvas inside', inject(function ($compile) {
-    element = angular.element('<level-selector></level-selector>');
+  it('should create level-selector', inject(function ($compile) {
+    element = angular.element('<level-selector><canvas></canvas></level-selector>');
     element = $compile(element)(scope);
-    expect(element.find('canvas').length).toBe(1);
+    expect(element.hasClass('ng-scope')).toBe(true);
   }));
 });
