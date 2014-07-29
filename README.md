@@ -1,6 +1,5 @@
 jsgame
 ======
-[![Build Status](https://travis-ci.org/Ahineya/jsblackbox.svg?branch=master)](https://travis-ci.org/Ahineya/jsblackbox)
-
+[![Build Status](https://travis-ci.org/Ahineya/jsgame.svg?branch=master)](https://travis-ci.org/Ahineya/jsgame)
 
 Regex Javascript game
