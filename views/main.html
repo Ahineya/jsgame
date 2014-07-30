@@ -1,11 +1,1 @@
-<div>
-    <ul class="levels-list clearfix">
-    	<li ng-repeat="level in levelsData" class='level-list-item clearfix'>
-            <level-selector stroke-style="green" fill-style="#000" corners="6" line-width="2" />
-    	</li>
-    </ul>
-	<section class="level-window clearfix"  ng-show="playing">
-		<span class="level-window-closer" ng-click="playing = false">×</span>
-    	<div class="clearfix " ng-include="'/views/levels/' + selectedLevel.type + '.html'"></div>
-    </section>
-</div>
+<div> <ul class="levels-list clearfix"> <li ng-repeat="level in levelsData" class="level-list-item clearfix"> <level-selector stroke-style="green" fill-style="#000" corners="6" line-width="2"> </li> </ul> <section class="level-window clearfix" ng-show="playing"> <span class="level-window-closer" ng-click="playing = false">×</span> <div class="clearfix" ng-include="'/views/levels/' + selectedLevel.type + '.html'"></div> </section> </div>
