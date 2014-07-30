@@ -9,7 +9,7 @@
 angular.module('jsgameApp')
   .directive('levelSelector', function () {
     return {
-        templateUrl: '/views/levelSelector.html',
+        templateUrl: 'views/levelSelector.html',
         restrict: 'EA',
         link: function postLink(scope, element, attrs) {
 

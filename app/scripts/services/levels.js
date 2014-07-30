@@ -13,7 +13,7 @@ angular.module('jsgameApp')
         var levelsData = {
             data: [],
             get: function() {
-                var promise = $http.get('/data/levels.json').then(function (response) {
+                var promise = $http.get('data/levels.json').then(function (response) {
                     return response.data;
                 });
                 return promise;

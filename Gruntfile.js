@@ -326,6 +326,11 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: 'app/data',
+          dest: '<%= yeoman.dist %>/data',
+          src: ['*']
         }]
       },
       styles: {
@@ -360,16 +365,15 @@ module.exports = function (grunt) {
     },
 
     //Deploy to github-pages
-    githubPages: {
-    target: {
-      options: {
-        // The default commit message for the gh-pages branch
-        commitMessage: 'deploy'
-      },
-      // The folder where your gh-pages repo is
-      src: 'app'
-    }
-  }
+
+          'gh-pages': {
+              options: {
+                  base: 'dist'
+              },
+              src: ['**']
+          }
+
+
   });
 
 
@@ -425,7 +429,7 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('deploy', ['githubPages:target']);
+    grunt.registerTask('deploy', ['default', 'gh-pages']);
 
 };
  
