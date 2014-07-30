@@ -1,0 +1,22 @@
+<section ng-controller="CrosserCtrl">
+    <h1 class="level-title">{{selectedLevel.name}}</h1>
+    <section class="level-wrapper clearfix">
+	    <article class="level-results crosser clearfix">
+	    	<ul>
+	    		<li class="list-subtitle">Need to pass</li>
+	            <li class="level-test" ng-repeat="regex in selectedLevel.data.regexps" ng-class="getClass($index)">{{regex}}</li>
+	        </ul>
+	    </article>
+		<article class="level-controls crosser clearfix">
+			<input type="text" class="input-field" ng-model="input"/>
+			<button ng-click="testInput()">Check</button>
+		</article>
+		<article class="level-alerts clearfix" ng-show="victory">
+			<div class="level-alert success" ng-show="victory">
+				<p>You win.</p>
+				<button class="next-level" ng-click="nextLevel(selectedLevel)">Next level</button>
+			</div>
+		</article>
+	</section>
+    <section class="level-wrapper clearfix" ng-bind-html="selectedLevel.description"></section>
+</section>

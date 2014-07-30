@@ -1,5 +1,4 @@
 <section ng-controller="GolfCtrl">
-
     <h1 class="level-title">{{selectedLevel.name}}</h1>
 	<section class="level-wrapper clearfix">
 	    <article class="level-results clearfix">
@@ -12,7 +11,7 @@
 	            <li class="level-test" ng-repeat="fail in selectedLevel.data.failed" ng-class="getClass($index, 'failed')">{{fail}}</li>
 	        </ul>
 	    </article>
-		<article class="level-controls clearfix">
+		<article class="level-controls golf clearfix">
 			<div class="regexp-field-wrapper">
 				<input type="text" class="regexp-field" ng-model="regexp"/>
 			</div>
@@ -26,7 +25,4 @@
 	    </article>
     </section>
     <section class="level-wrapper clearfix" ng-bind-html="selectedLevel.description"></section>
-
-    
-
 </section>

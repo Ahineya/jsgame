@@ -29,11 +29,6 @@ angular.module('jsgameApp')
             $scope.levelsData = levels.data;
         });
 
-       /* $http({method: 'GET', url: '/data/levels.json'})
-            .success(function(data){
-                $scope.levelsData = data;
-            });
-*/
         $scope.loadLevel = function(level) {
             $scope.playing = true;
             $scope.selectedLevel = level;

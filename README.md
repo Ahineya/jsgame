@@ -1,4 +1,0 @@
-jsgame
-======
-
-Regex Javascript game
