@@ -1,0 +1,49 @@
+[
+    {
+        "id": "testlevel1",
+        "name": "Level1",
+        "description": "<p>Lalala lorem ipsum 1</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["a", "b", "c"],
+            "failed": ["1", "2", "3"]
+        }
+    },{
+        "id": "testlevel2",
+        "name": "Level2",
+        "description": "<p>Lalala lorem ipsum 2</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["aa", "bb", "cc"],
+            "failed": ["a", "b", "c"]
+        }
+    },{
+        "id": "testlevel3",
+        "name": "Level3",
+        "description": "<p>Lalala lorem ipsum 3</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["aaa", "bbb", "ccc"],
+            "failed": ["aba", "cac", "bba"]
+        }
+    },
+    {
+        "id": "testlevel4",
+        "name": "Level4",
+        "description": "<p>Lalala lorem ipsum 3</p>",
+        "type": "golf",
+        "data": {
+            "successed": ["famous", "fabulous", "precious"],
+            "failed": ["fiddle", "dribble", "tussle"]
+        }
+    },
+    {
+        "id": "testlevel5",
+        "name": "Level5",
+        "description": "<p>Lalala lorem ipsum 3</p>",
+        "type": "crosser",
+        "data": {
+            "regexps": ["[a-d]","[c-z]"]
+        }
+    }
+]
